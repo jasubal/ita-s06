@@ -7,7 +7,10 @@ Vue.component('navbotons', {
     <button class="btn" @click="mouIndex(-1)">Anterior</button>
     <button class="btn" @click="mouIndex(1)">Següent</button>
     </div>
+    <p></p>
+    <pre>{{$data}}</pre>
     </div>
+
     `,
 
     data(){
@@ -18,7 +21,8 @@ Vue.component('navbotons', {
     methods:{
            mouIndex(valor){
             valor < 0 ? this.txtIndex = 0 : this.txtIndex += valor;
-        }
+        },
+
 
     }
 

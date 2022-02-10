@@ -4,14 +4,17 @@ Vue.component('escena', {
     `
     <div class="comp c-escena">
     <ul class="lesfrases">
-    <li v-for="frase of frases">
+        <li v-for="frase of frases">
             {{frase.txt}}
-    </li>
-  </ul>
+        </li>
+    </ul>
+    <pre>{{$data}}</pre>
     </div>
     `
 ,
 // <button @click="numero++">+</button>-->
+
+
 props: ['numeroFill'],
 
 
@@ -25,15 +28,12 @@ data(){
             {txt:'Mentrestant altres heroes no van tenir tanta sort en la seva elecció '}
           ],
         }
+
     },
-    methods:{
-           numfrases(){
-            this.frases.length;
-
-           }
+    mounted(){
+        this.$emit("numfrases", this.frases.length);
+        //console.log(this.frases.length)
     }
-
-
 
 
 })

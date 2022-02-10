@@ -4,9 +4,10 @@ Vue.component('home', {
     `
     <div class="comp c-home">
 
-    <navbotons></navbotons>
+    <navbotons ></navbotons>
 
-    <escena ></escena>
+<h4>num Frases: {{numfrases}}</h4>
+<escena @numfrases="numfrases=$event"></escena>
 
     </div>
     `,
@@ -15,10 +16,9 @@ Vue.component('home', {
         return {
             nom: 'home',
             numeroPare: 1,
-    }
+            numfrases: '0',
 
-}
-
+    }}
 
 
 
