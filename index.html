@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>ITA s06</title>
+		<link rel="icon" href="/assets/cercle.png" type="image/png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+		<link href="styles.css" rel="stylesheet" />
+         <!-- development version, includes helpful console warnings -->
+
+         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		 <script src="components/navbotons.js"></script>
+         <script src="components/home.js"></script>
+         <script src="components/escena.js"></script>
+         <script src="main.js"></script>
+
+	</head>
+
+	<body>
+		<div id="app"  class="flex one center" >
+			<div id="page" class="maxW1200">
+
+            <home></home>
+
+		</div>
+	</div>
+
+		 <script>
+			new Vue({
+		el: '#app', // contoled element
+		data: {
+
+		}
+	});
+
+	Vue.config.devtools = true;
+	</script>
+
+</body>
+</html>
