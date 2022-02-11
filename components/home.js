@@ -3,7 +3,7 @@ Vue.component('home', {
     template:`
     <div class="comp c-home">
 
-    <!--<navbotons @current="currentSentence=$event"></navbotons>-->
+    <!--<navbotons @currentSentence="currentSentence=$event"></navbotons>-->
 
     <div class="comp c-navbotons">
     <div class="flex center two">
@@ -14,7 +14,7 @@ Vue.component('home', {
 
     <h4 class="counter">Current sentence: {{currentSentence}} - Total Sentences: {{totalSentences()}}</h4>
 
-    <escena :frases="frases" :current="currentSentence"></escena>
+    <escena :frases="frases" :currentSentence="currentSentence"></escena>
 
 <!--<pre>{{$data}}</pre>-->
 

@@ -3,14 +3,14 @@ Vue.component('escena', {
  template:`
     <div class="comp c-escena">
     <ul class="lesfrases">
-<li class="frase" v-for="(item, i ) in frases" :key="i" :class="{ active: i === current-1}" >
+<li class="frase" v-for="(item, i ) in frases" :key="i" :class="{ active: i === currentSentence-1}" >
 {{item.txt}}
     </li>
   </ul>
     </div>
     `,
 
-props: ['frases','current'],
+props: ['frases','currentSentence'],
 data(){
     return{
         nom: "escena",
