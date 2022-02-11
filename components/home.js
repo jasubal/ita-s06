@@ -1,13 +1,22 @@
 Vue.component('home', {
 
-    template:
-    `
+    template:`
     <div class="comp c-home">
 
-    <navbotons ></navbotons>
+    <!--<navbotons @current="currentSentence=$event"></navbotons>-->
 
-<h4>num Frases: {{numfrases}}</h4>
-<escena @numfrases="numfrases=$event"></escena>
+    <div class="comp c-navbotons">
+    <div class="flex center two">
+    <button class="btn" @click="mouIndex(-1)">Anterior</button>
+    <button class="btn" @click="mouIndex(1)">Següent</button>
+    </div>
+    </div>
+
+    <h4 class="counter">Current sentence: {{currentSentence}} - Total Sentences: {{totalSentences()}}</h4>
+
+    <escena :frases="frases" :current="currentSentence"></escena>
+
+<!--<pre>{{$data}}</pre>-->
 
     </div>
     `,
@@ -15,11 +24,23 @@ Vue.component('home', {
     data(){
         return {
             nom: 'home',
-            numeroPare: 1,
-            numfrases: '0',
-
-    }}
-
+            currentSentence: 1,
+            frases: [
+                {txt:'El nostre heroi estava surant per l´espai sideral quan a la llunyania va albirar una nau espacial '},
+                {txt:'Sentia curiositat per l´interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes. '},
+                {txt:'L´heroi va decidir travessar la porta que el portava a casa '},
+                {txt:'Mentrestant altres heroes no van tenir tanta sort en la seva elecció '}
+              ]
+    }
+},
+    methods: {
+        totalSentences(){
+            return this.frases.length;
+        },
+        mouIndex(valor){
+            valor < 0 ? this.currentSentence = 1 : this.currentSentence > this.frases.length-1 ? this.currentSentence = 1 : this.currentSentence += valor;
+        }
+    }   //todo mouAvant / mouAtras
 
 
 })

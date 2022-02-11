@@ -1,39 +1,32 @@
 Vue.component('escena', {
 
- template:
-    `
+ template:`
     <div class="comp c-escena">
     <ul class="lesfrases">
-        <li v-for="frase of frases">
-            {{frase.txt}}
-        </li>
-    </ul>
-    <pre>{{$data}}</pre>
+<li class="frase" v-for="(item, i ) in frases" :key="i" :class="{ active: i === current-1}" >
+{{item.txt}}
+    </li>
+  </ul>
+  <pre>{{$data}}</pre>
     </div>
-    `
-,
-// <button @click="numero++">+</button>-->
+    `,
 
-
-props: ['numeroFill'],
-
-
+props: ['frases','current'],
 data(){
     return{
         nom: "escena",
-        frases: [
-            {txt:'El nostre heroi estava surant per l´espai sideral quan a la llunyania va albirar una nau espacial '},
-            {txt:'Sentia curiositat per l´interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes. '},
-            {txt:'L´heroi va decidir travessar la porta que el portava a casa '},
-            {txt:'Mentrestant altres heroes no van tenir tanta sort en la seva elecció '}
-          ],
         }
-
     },
-    mounted(){
-        this.$emit("numfrases", this.frases.length);
-        //console.log(this.frases.length)
-    }
+mounted(){
+      //this.$emit("numfrases", this.frases.length);
+      //console.log(this.frases.length)
+  },
+  methods: {
+    selectItem(i) {
+      this.activeItem = i;
+  },
+
+  }
 
 
 })
