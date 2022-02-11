@@ -7,8 +7,8 @@ Vue.component('home', {
 
     <div class="comp c-navbotons">
     <div class="flex center two">
-    <button class="btn" @click="mouIndex(-1)">Anterior</button>
-    <button class="btn" @click="mouIndex(1)">Següent</button>
+    <button class="btn" @click="indexDown()">Anterior</button>
+    <button class="btn" @click="indexUp()">Següent</button>
     </div>
     </div>
 
@@ -37,10 +37,13 @@ Vue.component('home', {
         totalSentences(){
             return this.frases.length;
         },
-        mouIndex(valor){
-            valor < 0 ? this.currentSentence = 1 : this.currentSentence > this.frases.length-1 ? this.currentSentence = 1 : this.currentSentence += valor;
-        }
-    }   //todo mouAvant / mouAtras
+        indexUp(){
+            this.currentSentence > this.frases.length-1 ? this.currentSentence = 1 : this.currentSentence++ ;
+        },
+        indexDown(){
+            this.currentSentence <= 1 ? this.currentSentence = this.frases.length : this.currentSentence-- ;
+        },
+    }
 
 
 })

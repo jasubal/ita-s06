@@ -7,7 +7,6 @@ Vue.component('escena', {
 {{item.txt}}
     </li>
   </ul>
-  <pre>{{$data}}</pre>
     </div>
     `,
 
