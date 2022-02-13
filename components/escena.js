@@ -5,7 +5,7 @@ Vue.component('escena', {
     <ul class="lesfrases">
 <li class="frase" v-for="(item, i ) in frases" :key="i" :class="{ active: i === currentSentence-1}" >
 {{item.txt}}
-    </li>
+</li>
   </ul>
     </div>
     `,
@@ -14,16 +14,14 @@ props: ['frases','currentSentence'],
 data(){
     return{
         nom: "escena",
-        }
-    },
-mounted(){
-      //this.$emit("numfrases", this.frases.length);
-      //console.log(this.frases.length)
-  },
+      }
+},
   methods: {
+/*
     selectItem(i) {
       this.activeItem = i;
-  },
+    },
+    */
 
   }
 
