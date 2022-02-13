@@ -14,40 +14,32 @@ pre { font-size: 12px; color: #666; }
 
 .comp { padding: 1em; }
 
-#wellcome {
-    min-height: 80vh;
-    display: flex;
-    max-width: 55em;
-    align-content: center;
-}
+#wellcome { min-height: 80vh; display: flex; max-width: 55em; align-content: center; }
 
 .c-navbotons { color: #111; }
-.c-navbotons button {
-    max-width: 20%;
-    background-color: #ffffffbf;
-    color: #111;
-    padding: 6px 12px;
-}
+.c-navbotons button { max-width: 20%; background-color: #ffffffbf; color: #111; padding: 6px 12px; }
 .btn-back{
 
 }
 .c-navbotons > div { display: flex; justify-content: space-evenly; }
 .c-home { color: #111; }
 .c-escena { color: #111; }
-.lesfrases {
-}
-.lesfrases li{
-    background-color: white;
+.lesfrases { }
+.lesfrases li {
+    background-color: #ffffffab;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     color: #666;
     margin: 0.5em 0;
     padding: 6px 12px;
     text-align: center;
+    transition: all .5s;
 }
 .active {
     background-color: #60ce2d!important;
     color: #fff!important;
+    transition: all .1s;
+    font-size: 1.1em;
 }
 .counter {
     color: #ff4545;

@@ -59,12 +59,12 @@ Això representa un tutorial, en el qual mitjançant dos botons els nous usuaris
             //console.log("background: url(./assets/"+this.frases[idx-1].img+") no-repeat center center fixed;");
             document.body.style =
             "background: url(assets/"+this.frases[idx-1].img+") no-repeat center center fixed;" ;
+            console.log(document.body.style.background);
         }
     },
     mounted(){
         //document.body.style = this.themes[this.currentSentence];
         //document.body.style.background = "url(assets/bg-1.jpg) no-repeat center";
-        //console.log(document.body.style.background);
         },
 
 

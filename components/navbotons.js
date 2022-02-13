@@ -2,7 +2,7 @@ Vue.component('navbotons', {
 
     template:`
     <div class="comp c-navbotons">
-    <button class="button btn-back" @click="torna()">Torna</button>
+ <!--   <button class="button btn-back" @click="torna()">Torna</button> -->
     <div class="flex center two">
     <button class="btn" @click="indexDown()">Anterior</button>
     <button class="btn" @click="indexUp()">Següent</button>
