@@ -13,7 +13,7 @@ Això representa un tutorial, en el qual mitjançant dos botons els nous usuaris
 </div>
 <div id="game" v-show="hasClicked">
     <navbotons :totalSentences="totalSentences()"
-    @currentSentence= "currentSentence = $event" @changetheme="changetheme"></navbotons>
+    @currentSentence="currentSentence=$event" @changetheme="changetheme"></navbotons>
     <escena :frases="frases" :currentSentence="currentSentence" ></escena>
 </div>
 
