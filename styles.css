@@ -61,3 +61,12 @@ pre {
     padding: 6px 12px;
     text-align: center;
 }
+.active {
+    background-color: #60ce2d!important;
+    color: #fff!important;
+}
+.counter {
+    text-align: center;
+    font-size: .8em;
+    font-weight: normal;
+}

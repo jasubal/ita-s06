@@ -1,30 +1,38 @@
 Vue.component('navbotons', {
 
-    template:
-    `
+    template:`
     <div class="comp c-navbotons">
     <div class="flex center two">
-    <button class="btn" @click="mouIndex(-1)">Anterior</button>
-    <button class="btn" @click="mouIndex(1)">Següent</button>
+    <button class="btn" @click="indexDown()">Anterior</button>
+    <button class="btn" @click="indexUp()">Següent</button>
     </div>
+
+    <h4 class="counter">Current sentence: {{currentSentence}} - Total Sentences: {{totalSentences}}</h4>
     </div>
     `,
 
-    data(){
-        return {
-            txtIndex: 0,
-        }
-    },
-    methods:{
-           mouIndex(valor){
-            valor < 0 ? this.txtIndex = 0 : this.txtIndex += valor;
-        }
+props: ['totalSentences'],
+
+data(){
+    return {
+        nom: 'navbotons',
+        currentSentence: 1,
 
     }
+},
 
+methods : {
 
+    indexUp(){
+        this.currentSentence > this.totalSentences-1 ? this.currentSentence = 1 : this.currentSentence++ ;
+        this.$emit('currentSentence', this.currentSentence);
+    },
+    indexDown(){
+        this.currentSentence <= 1 ? this.currentSentence = this.totalSentences : this.currentSentence-- ;
+        this.$emit('currentSentence', this.currentSentence);
+    },
 
-
+}
 
 
 })
