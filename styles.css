@@ -1,72 +1,57 @@
 body {
-    margin: 1em;
-    padding: 0;
+margin: 0; padding: 0;
+background: #f7f7f7;
+background-size: cover!important;
+background-attachment: fixed;
+background-repeat: no-repeat;
 }
-.maxW1200 {
-    max-width: 1200px;
-}
-.maxW960 {
-    max-width: 960px;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-input, textarea, .select select {
-    max-width: 25em;
-}
-input[type=number]{
-    width: 4em;
-}
-pre {
-    font-size: 12px;
-    color: #666;
-}
+.maxW1200 { max-width: 1200px; }
+.maxW960 { max-width: 960px; }
+ul { list-style: none; padding: 0; }
+input, textarea, .select select { max-width: 25em; }
+input[type=number]{ width: 4em; }
+pre { font-size: 12px; color: #666; }
 
 .comp { padding: 1em; }
 
-.c-navbotons {
-    background-color: white;
-    color: #111;
- }
- .c-navbotons button {
-    max-width: 49%;
-    background-color: #b6b6b6;
-    color: #111;
-    padding: 6px 0;
-}
-.c-navbotons > div {
-    display: flex;
-    justify-content: space-evenly;
-}
+#wellcome { min-height: 80vh; display: flex; max-width: 55em; align-content: center; }
 
-.c-home {
-    background-color: white;
-    color: #111;
-}
-.c-escena {
-    background-color: white;
-    color: #111;
- }
-
-.lesfrases {
+.c-navbotons { color: #111; }
+.c-navbotons button { max-width: 20%; background-color: #ffffffbf; color: #111; padding: 6px 12px; }
+.btn-back{
 
 }
-.lesfrases li{
-    margin: 0.5em 0;
-    border: 1px solid #ccc;
+.c-navbotons > div { display: flex; justify-content: space-evenly; }
+.c-home { color: #111; }
+.c-escena { color: #111; }
+.lesfrases { }
+.lesfrases li {
+    background-color: #ffffffab;
     border-radius: 20px;
-    background-color: white;
+    border: 1px solid #fff;
     color: #666;
+    margin: 0.5em 0;
     padding: 6px 12px;
     text-align: center;
+    transition: all .5s;
 }
 .active {
     background-color: #60ce2d!important;
     color: #fff!important;
+    transition: all .1s;
+    font-size: 1.1em;
 }
 .counter {
-    text-align: center;
+    color: #ff4545;
     font-size: .8em;
     font-weight: normal;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+#user-info {
+    text-align: center;
+    font-size: 1.2em;
 }
