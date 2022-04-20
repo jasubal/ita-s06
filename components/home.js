@@ -4,16 +4,16 @@ Vue.component('home', {
 
 <div class="comp c-home maxW1200 flex center">
 
-<div id="wellcome"  class="flex one center" v-show="!hasClicked">
+<div id="wellcome"  class="flex one center" v-if="!hasClicked">
 <div id="user-info" class="flex one center">
 <p>Benvingut user<br>
 Això representa un tutorial, en el qual mitjançant dos botons els nous usuaris poden avançar o retrocedir en els consells, modificant-se el text d'ajuda i la imatge de fons.</p>
 </div>
 <input type=button value="INICIA EL TUTORIAL" @click="userClicked">
 </div>
-<div id="game" v-show="hasClicked">
+<div id="game" v-if="hasClicked">
     <navbotons :totalSentences="totalSentences()"
-    @currentSentence="currentSentence=$event" @changetheme="changetheme"></navbotons>
+    @currentSentence="currentSentence=$event" @changetheme="changetheme" />
     <escena :frases="frases" :currentSentence="currentSentence" ></escena>
 </div>
 
@@ -27,13 +27,13 @@ Això representa un tutorial, en el qual mitjançant dos botons els nous usuaris
             currentSentence: 1,
             frases: [
             {txt:'El nostre heroi estava surant per l\’espai sideral quan a la llunyania va albirar una nau espacial',
-                img:'bg-1.jpg' },
+            img:'bg-1.jpg' },
             {txt:'Sentia curiositat per l\’interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.',
-                img:'bg-2.jpg' },
+            img:'bg-2.jpg' },
             {txt:'L\’heroi va decidir travessar la porta que el portava a casa',
-                img:'bg-3.jpg' },
+            img:'bg-3.jpg' },
             {txt:'Mentrestant altres heroes no van tenir tanta sort en la seva elecció',
-                img:'bg-4.jpg' },
+            img:'bg-4.jpg' },
             ],
             /*
             themes: [{

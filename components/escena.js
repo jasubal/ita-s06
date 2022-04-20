@@ -3,8 +3,8 @@ Vue.component('escena', {
  template:`
     <div class="comp c-escena">
     <ul class="lesfrases">
-<li class="frase" v-for="(item, i ) in frases" :key="i" :class="{ active: i === currentSentence-1}" >
-{{item.txt}}
+<li class="frase" v-for="(frase, i ) in frases" :key="i" :class="{ active: i === currentSentence-1}" >
+{{frase.txt}}
 </li>
   </ul>
     </div>
